@@ -17,6 +17,7 @@ public class SpielFenster extends JFrame {
 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		sp.bob = Spieler.load();
+		sp.sf.load();
 		setTitle("Slime Quest");
 		Container c = getContentPane();
 		setPreferredSize(new Dimension(1200, 1200));
@@ -24,20 +25,25 @@ public class SpielFenster extends JFrame {
 		addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
-				System.out.println(e.getExtendedKeyCode());
 				if (sp.sf.begehbarkeitprüfen(e.getExtendedKeyCode(), sp.bob.getXpos(), sp.bob.getYpos(), 1)==true) {
 					sp.bob.bewegen(e.getExtendedKeyCode());
+					sp.zeichenanfang();
+					sp.spielerposition(e.getExtendedKeyCode());
 					sp.repaint();
 				}
-				System.out.println(sp.bob.getXpos() + "  " + sp.bob.getYpos());
-				System.out.println(sp.bob.richtung);
+				System.out.print("amMaprandx: "+ sp.sf.amMaprandx+"  |  ");
+				System.out.print("amMaprandy: "+sp.sf.amMaprandy+"\n");
+				System.out.println("Xpos: "+sp.bob.getXpos() + "  |  Ypos: " + sp.bob.getYpos());
+				System.out.println("Zeichenxpos: "+sp.zeichenxpos + "  |  Zeichenypos: " + sp.zeichenypos);
+				System.out.println("Zeichenanfangx: "+sp.zeichenanfangx + "  |  Zeichenanfangy: " + sp.zeichenanfangy);
+
 
 			}
 		});
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				// TODO Auto-generated method stub
+				sp.safevars();
 				sp.bob.safe();
 				sp.sf.safe();
 			}

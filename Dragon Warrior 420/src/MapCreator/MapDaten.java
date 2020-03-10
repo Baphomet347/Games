@@ -21,14 +21,10 @@ public class MapDaten {
 		}
 		for (int i = 4; i < feldgröße-4; i++) {
 			for (int l = 4; l < feldgröße-4; l++) {
-				tileid[l][i][1] = 2;
-			}
-		}
-		for (int i = 8; i < feldgröße-8; i++) {
-			for (int l = 8; l < feldgröße-8; l++) {
 				tileid[l][i][1] = 1;
 			}
 		}
+
 	}
 
 	public void safe() {

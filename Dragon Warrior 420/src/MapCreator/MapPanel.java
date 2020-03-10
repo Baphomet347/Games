@@ -14,8 +14,8 @@ public class MapPanel extends JPanel {
 
 	public MapPanel() {
 		md = new MapDaten();
-		//md.maplayout();
-		md.load();
+		md.maplayout();
+		//md.load();
 
 	}
 
