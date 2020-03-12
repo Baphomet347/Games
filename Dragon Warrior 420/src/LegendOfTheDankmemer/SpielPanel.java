@@ -76,7 +76,7 @@ public class SpielPanel extends JPanel {
 	private void spielfeldzeichnen(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;
 		super.paintComponents(g2);
-
+		zeichenanfang();
 		for (int i = 0; i < 17; i++) {
 			for (int l = 0; l < 17; l++) {
 				g2.drawImage(im.tileidtoimage(sf.tileid[i + zeichenanfangx][l + zeichenanfangy][1]), 64 * i, 64 * l,

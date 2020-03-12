@@ -27,7 +27,7 @@ public class SpielFenster extends JFrame {
 			public void keyPressed(KeyEvent e) {
 				if (sp.sf.begehbarkeitprüfen(e.getExtendedKeyCode(), sp.bob.getXpos(), sp.bob.getYpos(), 1)==true) {
 					sp.bob.bewegen(e.getExtendedKeyCode());
-					sp.zeichenanfang();
+
 					sp.spielerposition(e.getExtendedKeyCode());
 					sp.repaint();
 				}

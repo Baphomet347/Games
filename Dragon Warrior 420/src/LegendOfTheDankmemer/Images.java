@@ -9,12 +9,12 @@ public class Images {
 	Image BergImage = Toolkit.getDefaultToolkit().getImage("textures/Berg.png");
 	Image GrassImage = Toolkit.getDefaultToolkit().getImage("textures/Grass.png");
 	Image WuesteImage = Toolkit.getDefaultToolkit().getImage("textures/Wueste.png");
-	Image MeerImage = Toolkit.getDefaultToolkit().getImage("textures/Meer.gif");
+	Image MeerImage = Toolkit.getDefaultToolkit().getImage("textures/Meer.png");
 
 	Image testImage = Toolkit.getDefaultToolkit().getImage("textures/test.gif");
 
 	Image bobSOUTH = Toolkit.getDefaultToolkit().getImage("textures/bob_SOUTH.gif");
-	
+
 	public Image tileidtoimage(int bild) {
 		switch (bild) {
 		case 0:
