@@ -10,7 +10,6 @@ public class Images {
 	Image GrassImage = Toolkit.getDefaultToolkit().getImage("textures/Grass.png");
 	Image WuesteImage = Toolkit.getDefaultToolkit().getImage("textures/Wueste.png");
 	Image MeerImage = Toolkit.getDefaultToolkit().getImage("textures/Meer.png");
-
 	Image testImage = Toolkit.getDefaultToolkit().getImage("textures/test.gif");
 
 	Image bobSOUTH = Toolkit.getDefaultToolkit().getImage("textures/bob_SOUTH.gif");
@@ -18,7 +17,6 @@ public class Images {
 	public Image tileidtoimage(int bild) {
 		switch (bild) {
 		case 0:
-			;
 			return BergImage;
 		case 1:
 			return GrassImage;
@@ -26,10 +24,10 @@ public class Images {
 			return MeerImage; //MeerImage eigentlich
 		case 3:
 			return WuesteImage;
-		case 404:
+		default:
 			return testImage;
 		}
-		return null;
+
 	}
 
 	public Image facingtoimage(facing richtung) {

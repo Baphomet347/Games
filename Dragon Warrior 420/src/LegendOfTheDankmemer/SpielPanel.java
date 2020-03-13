@@ -37,7 +37,7 @@ public class SpielPanel extends JPanel {
 	}
 
 	public void spielerposition(int keycodeid) {
-		if (sf.xmaprandprüfen(bob.getXpos()) == true) {
+		if (sf.xmaprandprÃ¼fen(bob.getXpos()) == true) {
 			if (keycodeid == 68) {
 				zeichenxpos++;
 			}
@@ -47,7 +47,7 @@ public class SpielPanel extends JPanel {
 		} else {
 			zeichenxpos = 8;
 		}
-		if (sf.ymaprandprüfen(bob.getYpos()) == true) {
+		if (sf.ymaprandprÃ¼fen(bob.getYpos()) == true) {
 			if (keycodeid == 87) {
 				zeichenypos--;
 			}
@@ -61,13 +61,13 @@ public class SpielPanel extends JPanel {
 	}
 
 	void zeichenanfang() {
-		if (sf.xmaprandprüfen(bob.getXpos()) == false) {
-			if (bob.getXpos() > 8 || bob.getXpos() <= Spielfeld.feldgröße) {
+		if (sf.xmaprandprÃ¼fen(bob.getXpos()) == false) {
+			if (bob.getXpos() > 8 || bob.getXpos() <= Spielfeld.feldgrÃ¶ÃŸe) {
 				zeichenanfangx = bob.getXpos() - 8;
 			}
 		}
-		if (sf.ymaprandprüfen(bob.getYpos()) == false) {
-			if (bob.getYpos() > 8 || bob.getYpos() <= Spielfeld.feldgröße) {
+		if (sf.ymaprandprÃ¼fen(bob.getYpos()) == false) {
+			if (bob.getYpos() > 8 || bob.getYpos() <= Spielfeld.feldgrÃ¶ÃŸe) {
 				zeichenanfangy = bob.getYpos() - 8;
 			}
 		}

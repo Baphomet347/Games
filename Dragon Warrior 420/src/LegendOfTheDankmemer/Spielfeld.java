@@ -7,17 +7,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Spielfeld {
-	public static int feldgröße = 24;
+	public static int feldgrÃ¶ÃŸe= 24;
 	Tile ti = new Tile();
-	int tileid[][][] = new int[feldgröße+1][feldgröße+1][2];
+	int tileid[][][] = new int[feldgrÃ¶ÃŸe+1][feldgrÃ¶ÃŸe+1][2];
 	boolean amMaprandx, amMaprandy;
 
 	public Spielfeld() {
 
 	}
 
-	public boolean xmaprandprüfen(int xpos) {
-		if (xpos < 8 || xpos >= feldgröße - 8) {
+	public boolean xmaprandprÃ¼fen(int xpos) {
+		if (xpos < 8 || xpos >= feldgrÃ¶ÃŸe- 8) {
 			amMaprandx = true;
 		} else {
 			amMaprandx = false;
@@ -25,8 +25,8 @@ public class Spielfeld {
 		return amMaprandx;
 	}
 
-	public boolean ymaprandprüfen(int ypos) {
-		if (ypos < 8 || ypos>= feldgröße - 8) {
+	public boolean ymaprandprÃ¼fen(int ypos) {
+		if (ypos < 8 || ypos>= feldgrÃ¶ÃŸe- 8) {
 			amMaprandy = true;
 		} else {
 			amMaprandy = false;
@@ -34,7 +34,7 @@ public class Spielfeld {
 		return amMaprandy;
 	}
 
-	public boolean begehbarkeitprüfen(int keycodeid, int xpos, int ypos, int zpos) {
+	public boolean begehbarkeitprÃ¼fen(int keycodeid, int xpos, int ypos, int zpos) {
 		if (keycodeid == 68) {
 			xpos++;
 		}
@@ -47,7 +47,7 @@ public class Spielfeld {
 		if (keycodeid == 83) {
 			ypos++;
 		}
-		return ti.begehbarkeitprüfen(tileid[xpos][ypos][zpos]);
+		return ti.begehbarkeitprÃ¼fen(tileid[xpos][ypos][zpos]);
 	}
 
 	public void safe() {
@@ -55,8 +55,8 @@ public class Spielfeld {
 		try {
 			bw = new BufferedWriter(new FileWriter("mapdata.csv"), '\t');
 			StringBuilder sb = new StringBuilder();
-			for (int i = 0; i < feldgröße; i++) {
-				for (int l = 0; l < feldgröße; l++) {
+			for (int i = 0; i < feldgrÃ¶ÃŸe; i++) {
+				for (int l = 0; l < feldgrÃ¶ÃŸe; l++) {
 					sb.append(tileid[l][i][1]);
 					sb.append(",");
 				}
@@ -73,10 +73,10 @@ public class Spielfeld {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader("mapdata.csv"), '\t');
-			for (int i = 0; i < feldgröße; i++) {
+			for (int i = 0; i < feldgrÃ¶ÃŸe; i++) {
 				String s = br.readLine();
 				String[] integerStrings = s.split(",");
-				for (int l = 0; l < feldgröße; l++) {
+				for (int l = 0; l < feldgrÃ¶ÃŸe; l++) {
 					tileid[l][i][1] = Integer.parseInt(integerStrings[l]);
 					System.out.print(tileid[l][i][1] + " ");
 				}

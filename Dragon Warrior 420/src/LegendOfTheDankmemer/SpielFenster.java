@@ -25,9 +25,8 @@ public class SpielFenster extends JFrame {
 		addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
-				if (sp.sf.begehbarkeitprüfen(e.getExtendedKeyCode(), sp.bob.getXpos(), sp.bob.getYpos(), 1)==true) {
+				if (sp.sf.begehbarkeitprÃ¼fen(e.getExtendedKeyCode(), sp.bob.getXpos(), sp.bob.getYpos(), 1)==true) {
 					sp.bob.bewegen(e.getExtendedKeyCode());
-
 					sp.spielerposition(e.getExtendedKeyCode());
 					sp.repaint();
 				}
@@ -48,7 +47,6 @@ public class SpielFenster extends JFrame {
 				sp.sf.safe();
 			}
 		});
-
 		pack();
 		setVisible(true);
 	}

@@ -37,7 +37,7 @@ public class Tile {
 		return tile;
 	}
 
-	public boolean begehbarkeitprüfen(int id) {
+	public boolean begehbarkeitprÃ¼fen(int id) {
 		tileidtotileobject(id);
 		if (tile.begehbarkeit == true) {
 			System.out.println("Begehbarkeit: true");

@@ -22,15 +22,15 @@ public class MapPanel extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;
-		int tilegröße = 1408 /Spielfeld.feldgröße;
-		int anzahltiles = 1408/tilegröße;
+		int tilegrÃ¶ÃŸe = 1408 /Spielfeld.feldgrÃ¶ÃŸe;
+		int anzahltiles = 1408/tilegrÃ¶ÃŸe;
 		super.paintComponents(g2);
 		for (int i = 0; i < anzahltiles; i++) {
 			for (int l = 0; l < anzahltiles; l++) {
 				Farbe(g, md.tileid[i][l][1]);
-				g2.fillRect(0 + tilegröße * i, 0 + tilegröße * l, tilegröße, tilegröße);
+				g2.fillRect(0 + tilegrÃ¶ÃŸe * i, 0 + tilegrÃ¶ÃŸe * l, tilegrÃ¶ÃŸe, tilegrÃ¶ÃŸe);
 				g2.setColor(Color.black);
-				g2.drawRect(0 + tilegröße * i, 0 + tilegröße * l, tilegröße, tilegröße);
+				g2.drawRect(0 + tilegrÃ¶ÃŸe * i, 0 + tilegrÃ¶ÃŸe * l, tilegrÃ¶ÃŸe, tilegrÃ¶ÃŸe);
 			}
 		}
 	}
