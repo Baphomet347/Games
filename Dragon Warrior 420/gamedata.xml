@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <spieler>
     <richtung>EAST</richtung>
-    <xpos>15</xpos>
-    <ypos>16</ypos>
+    <xpos>19</xpos>
+    <ypos>18</ypos>
     <zeichenanfangx>7</zeichenanfangx>
     <zeichenanfangy>7</zeichenanfangy>
-    <zeichenxpos>8</zeichenxpos>
-    <zeichenypos>9</zeichenypos>
+    <zeichenxpos>12</zeichenxpos>
+    <zeichenypos>11</zeichenypos>
 </spieler>
